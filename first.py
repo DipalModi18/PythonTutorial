@@ -11,6 +11,15 @@ myFolder.tempFile.temp()
 
 print('hello')
 
+for i in range(1, 3):
+    print(i)
+
+if True & False:
+    print('if True & False')
+
+if True and False:
+    print('True and False')
+
 str = "dipalamodi"
 print('str[2:5] : ', str[2:5])  # pal
 print('str*2 : ', str * 2)  # dipalamodidipalamodi

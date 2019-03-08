@@ -11,3 +11,5 @@ unittest
 time
 calendar
 os
+workerpool
+pika
