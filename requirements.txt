@@ -13,3 +13,4 @@ calendar
 os
 workerpool
 pika
+redis
