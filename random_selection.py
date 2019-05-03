@@ -15,5 +15,5 @@ print("randrange(100, 1000, 2) : ", random.randrange(100, 1000, 2))
 print('random between 0 and 1: ', random.random())
 
 # The method uniform() returns a random float r, such that x is less than or equal to r and r is less than y.
-print("latitude: " + str(uniform(-180, 180)))
-print("longitude: " + str(uniform(-90, 90)))
+print("latitude: {}".format(random.uniform(-180, 180)))
+print("longitude: {}".format(random.uniform(-90, 90)))

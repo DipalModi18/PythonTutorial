@@ -16,6 +16,7 @@ channel.queue_declare(queue='hello')
 def callback(ch, method, properties, body):
     # Receiving messages from the queue is more complex. It works by subscribing a callback function to a queue.
     # Whenever we receive a message, this callback function is called by the Pika library.
+    print('ch: {}, method: {}, properties: {}'.format(ch, method, properties))
     print(" [x] Received %r" % body)
 
 

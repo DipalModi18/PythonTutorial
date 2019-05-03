@@ -19,7 +19,7 @@ class MyThread(threading.Thread):
         print("Releasing the lock: ", self.threadName)
 
     def run(self):
-        print("In the run for: " + self.name)
+        print("In the run for: {}".format(self.name))
         # acquire(blocking) - If blocking is set to 0,
         # the thread returns immediately with a 0 value if the lock cannot be acquired and with a
         # 1 if the lock was acquired.

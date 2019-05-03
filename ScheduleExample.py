@@ -7,7 +7,7 @@ import time
 
 
 def job():
-    print("I'm working at..." + str(time.ctime()))
+    print("I'm working at...{}".format(time.ctime()))
 
 
 # schedule.every(): Schedule a new periodic job.
@@ -20,7 +20,7 @@ schedule.every().day.at("10:30").do(job)
 schedule.every(5).to(10).minutes.do(job)
 schedule.every().monday.do(job)
 schedule.every().wednesday.at("13:15").do(job)  # at: Specify a particular time that the job should be run at.
-schedule.every().minute.at(":17").do(job)
+#schedule.every().minute.at(":17").do(job)
 
 while True:
     schedule.run_pending()  # Run all jobs that are scheduled to run.

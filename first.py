@@ -9,7 +9,7 @@ import myFolder.tempFile
 
 myFolder.tempFile.temp()
 
-print('hello')
+print('hello {} {} {}'.format(5, 'first', "second"))
 
 for i in range(1, 3):
     print(i)

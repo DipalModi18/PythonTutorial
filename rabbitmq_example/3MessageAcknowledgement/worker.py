@@ -8,7 +8,7 @@ channel.queue_declare(queue='hello')
 
 
 def callback(ch, method, properties, body):
-    print(" [x] Received " + str(body))
+    print(" [x] Received {}".format(body))
     time.sleep(body.count(b'.'))
     print(" [x] Done")
     ch.basic_ack(delivery_tag=method.delivery_tag)
