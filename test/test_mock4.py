@@ -23,7 +23,7 @@ class TestMock4(TestCase):
 		m.return_value = 42
 		assert m() == 42
 
-		# if you’d like to return different values on each call you can assign an iterable to side_effect.
+		# if you  would like to return different values on each call you can assign an iterable to side_effect.
 		m.side_effect = ['foo', 'bar', 'baz']
 		assert m() == 'foo'
 		assert m() == 'bar'
@@ -37,7 +37,8 @@ class TestMock4(TestCase):
 
 		print('mock called for ', m.call_count, ' times')
 
-		# If you’d like to raise an exception when calling the Mock you can simply assign the exception object to side_effect.
+		# If you would like to raise an exception when calling the Mock you can simply assign the
+		#   exception object to side_effect.
 		m.side_effect = RuntimeError('Boom')
 		try:
 			m()
@@ -45,6 +46,9 @@ class TestMock4(TestCase):
 			assert True
 		else:
 			assert False
+
+	def test_play(self):
+		self.fail()
 
 
 # suite = TestSuite()

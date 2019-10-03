@@ -5,7 +5,7 @@ def add(x, y):
 	return x + y
 
 
-class TestCollector(unittest.TestCase):
+class TestExample(unittest.TestCase):
 	a = 15
 	b = 25
 
@@ -58,13 +58,14 @@ class TestCollector(unittest.TestCase):
 
 def arithmetic_test_suite():
 	suite = unittest.TestSuite()
-	suite.addTest(TestCollector('test_add'))
-	suite.addTest(TestCollector('test_sub'))
+	suite.addTest(TestExample('test_add'))
+	suite.addTest(TestExample('test_sub'))
 	return suite
+
 
 def get_test_suite():
 	suite = unittest.TestSuite()
-	suite.addTest(unittest.makeSuite(TestCollector))
+	suite.addTest(unittest.makeSuite(TestExample))
 	return suite
 
 # if __name__ == '__main__':

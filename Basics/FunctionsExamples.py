@@ -26,6 +26,7 @@ def printinfo(name, age=21):
 
 
 printinfo('dipal')
+printinfo('dipal', 22)
 
 
 # Variable-length Arguments

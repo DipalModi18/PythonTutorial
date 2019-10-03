@@ -33,7 +33,7 @@ emp2 = Employee("Ekta", 21000)
 print("Employee count: ", emp2.empCount)
 
 
-class Developer(Employee):
+class Developer(Employee):  # Inheritance
 
     def __init__(self, name: str, salary: float, lang: str):
         super().__init__(name, salary)

@@ -31,7 +31,7 @@ class TestBlog(TestCase):
 		self.assertIsInstance(response[0], dict)
 
 		# MagicMock, a subclass of Mock that implements default magic or dunder methods.
-		# This makes MagicMock ideal to mock class behaviour, which is why it’s the default class when patching.
+		# This makes MagicMock ideal to mock class behaviour, which is why it is the default class when patching.
 		print('MockBlog type: ', type(MockBlog))
 
 		# Additional assertions

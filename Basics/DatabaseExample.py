@@ -24,7 +24,7 @@ except pymysql.DatabaseError:
     db.rollback()
 
 
-# fetchall() − It fetches all the rows in a result set.
+# fetchall(): It fetches all the rows in a result set.
 sql = """select * from employee"""
 cursor.execute(sql)
 results = cursor.fetchall()

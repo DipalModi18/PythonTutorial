@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request, redirect, url_for
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
@@ -56,7 +57,7 @@ def bookById():
     return jsonify(results)
 
 
-@app.route('/book/<int:bookid>', methods=['GET'])  # 127.0.0.1:5000/api/v1/resources/book?id=0
+@app.route('/book/<int:bookid>', methods=['GET'])  # 127.0.0.1:5000/api/v1/resources/book/0
 def bookById2(bookid):
     print('Requested book: ', bookid)
     results = []
@@ -102,6 +103,32 @@ def getORpost():
         return "<h3>In GET</h3>"
     elif request.method == 'POST':
         return "<h3>In POST</h3>"
+
+
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    # Reference: http://flask.pocoo.org/docs/1.0/patterns/fileuploads/#uploading-files
+    if 'File' not in request.files:
+        return ' ', 204
+    file = request.files['File']
+    if file.filename == '':
+        return 'No selected file'
+
+    if file and allowed_file(file.filename):
+        file.save('/home/jeavio/Downloads/{}'.format(secure_filename(file.filename)))
+        # If you want to use the filename of the client to store the file on the server,
+        #   pass it through the secure_filename() function that Werkzeug provides
+    else:
+        return "File Not exists OR Invalid format"
+    return 'File Received'
 
 
 @app.errorhandler(404)
