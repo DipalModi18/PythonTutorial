@@ -52,4 +52,6 @@ api.add_resource(Employees, '/employees')
 if __name__ == '__main__':
     # app.run(host, port, debug, options)
      app.run(port='8080')
+    # While running a flask application using the docker container,  you should be binding host to 0.0.0.0
+    # if you want the container to be accessible from outside. i.e. app.run(host='0.0.0.0')
 

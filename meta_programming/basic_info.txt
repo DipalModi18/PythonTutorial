@@ -1,0 +1,8 @@
+# Reference: https://medium.com/@saurabhkukade_96600/meta-programming-in-python-7fb94c8c7152
+# Meta-programming is a act of writing code which manipulates code. OR
+# Meta-programming is an act of building functions and classes who can manipulate code by modifying,
+#   wrapping existing code or generating code.
+
+# Meta-programming in python can be achieved by:
+# 1. Decorators
+# 2. Meta-classes

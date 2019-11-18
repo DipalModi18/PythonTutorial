@@ -14,6 +14,10 @@ print('hello {} {} {}'.format(5, 'first', "second"))
 for i in range(1, 3):
     print(i)
 
+a, b = range(2)  # a=0, b=1
+aa, bb, *cc = range(8)  # aa: 0, bb: 1, cc: [2, 3, 4, 5, 6, 7]
+aaa, *bbb, ccc = range(8)  # aaa: 0, bbb: [1, 2, 3, 4, 5, 6], ccc: 7
+
 if True & False:
     print('if True & False')
 

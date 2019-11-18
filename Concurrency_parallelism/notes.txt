@@ -1,0 +1,10 @@
+The multithreading library is lightweight, shares memory, responsible for responsive UI
+    and is used well for I/O bound applications.
+However, the module is subject to the GIL
+Multiple threads live in the same process in the same space, each thread will do a specific task,
+    have its own code, own stack memory, instruction pointer, and share heap memory.
+
+
+The multiprocessing library uses separate memory space, multiple CPU cores, bypasses GIL limitations
+    in CPython, child processes are killable(ex. function calls in program) and is much easier to use.
+Some caveats of the module are a larger memory footprint and IPC’s a little more complicated with more overhead.
