@@ -1,3 +1,4 @@
+pandas
 multiprocessing
 random
 queue
@@ -14,3 +15,4 @@ os
 workerpool
 pika
 redis
+selenium
