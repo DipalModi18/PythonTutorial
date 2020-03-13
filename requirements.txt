@@ -16,3 +16,4 @@ workerpool
 pika
 redis
 selenium
+nltk=3.4.5
